@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@keyframes slideInLeft{
+    from {
+        transform: translateX(-1920px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes slideInRight{
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes fadeInRight {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-100px);
+        opacity: 1; 
+    }
+}
+
+*,
+* ::before,
+* ::after {
+    box-sizing: border-sub;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+body{
+    overflow: hidden;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.page{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(108deg, #347EFE 0%, #055FFE 100%);
+    justify-content: center;
+    align-items: center;
+}
+
+.pattern{
+    scale: 1.25;
+    position: absolute;
+    right: -50px;
+    animation: slideInRight 1s ease-out;
+}
+.pattern img{
+    display: block;
+    height: 100vh;
+}
+
+.header{
+    width: 100vw;
+    padding: 2rem;
+    left: 0px;
+    top: 0;
+    animation: slideInLeft 1s ease-out;
+}
+
+.header-content{
+    scale: 0.75;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.header-content img{
+    max-height: 127px;
+}
+
+.header-content p{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.content{
+    scale: 0.6;
+    transform: translateX(-100px);
+    width: 50%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(9,100px);
+    grid-gap: 1rem;
+    animation:fadeInRight 1s ease-out;
+}
+
+
+
+.bio{
+    display: flex;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    /* transform: translateX(-200px); */
+}
+
+.bio .tag-bio,.image-box{
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+}
+
+.back-bio{
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    border-radius: 0 25px 25px 0;
+    border: 2px solid black;
+    z-index: 0;
+    opacity: 0;
+}
+.back-bio img{
+    display: block;
+    height: 4rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+.back-bio .text{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.image-box{
+    scale: 0.6;
+    overflow: hidden;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translateY(60px);
+    height: 196px;
+    width: 196px;
+}
+.image-box img{
+    display: block;
+}
+.box1 img{
+    height: 300px;
+    /* transform: translateX(10px); */
+    transform: translateY(-20px);
+}
+
+.tag-bio{
+    scale: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #055FFE;
+    width: 196px;
+    height: 3rem;
+    z-index: 1;
+}
+
+.tag-bio p{
+    font-size: 1.75rem;
+}
+
+.tp3 p,.tp6 p{
+    margin: 8px 0 0 0;
+    font-size: 1.35rem;
+}
+
+.tag-bio p:first-child{
+    transform: translateY(15px);
+    opacity: 0;
+}
+.tag-bio p:nth-child(2){
+    transform: translateY(-20px);
+}
+
+.p1{
+    grid-area: 1 / 2 / 2 / 3;
+}
+.bp1{
+    grid-area: 1 / 1 / 2 / 4;
+}
+.p2{
+    grid-area: 2 / 2 / 3 / 3;
+}
+.bp2{
+    grid-area: 2 / 1 / 3 / 4;
+}
+.p3{
+    grid-area: 3 / 2 / 4 / 3;
+}
+.bp3{
+    grid-area: 3/ 1 / 4 / 4;
+}
+.p4{
+    grid-area: 4 / 2 / 5 / 3;
+}
+.bp4{
+    grid-area: 4 / 1 / 5 / 4;
+}
+.p5{
+    grid-area: 5 / 2 / 6 / 3;
+}
+.bp5{
+    grid-area: 5 / 1 / 6 / 4;
+}
+.p6{
+    grid-area: 6 / 2 / 7 / 3;
+}
+.bp6{
+    grid-area: 6 / 1 / 7 / 4;
+}
+.p7{
+    grid-area: 7 / 2 / 8 / 3;
+}
+.bp7{
+    grid-area: 7 / 1 / 8 / 4;
+}
+.p8{
+    grid-area: 8 / 2 / 9 / 3;
+}
+.bp8{
+    grid-area: 8 / 1 / 9 / 4;
+}
+.p9{
+    grid-area: 9 / 2 / 10 / 3;
+}
+.bp9{
+    grid-area: 9 / 1 / 10 / 4;
+}
+
+@media (min-width: 800px){
+    @keyframes fadeInRight {
+        from {
+            transform: translateX(200px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0px);
+            opacity: 1; 
+        }
+    }
+    
+    .content{
+        width: fit-content;
+        transform: translateX(0);
+        scale: 0.75;
+        grid-template-columns: repeat(7,200px);
+        grid-template-rows: repeat(3,200px);
+    }
+    .header{
+        position: absolute;
+    }
+    .header-content{
+        scale: 1;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .header-content p{
+        font-size: 4rem;
+    }
+    .pattern{
+        scale: 1;
+        right: 0px;
+    }
+    .bio{
+        width: 200px;
+        height: 200px;
+    }
+    .image-box{
+        scale: 1;
+        transform: translateY(0);
+    }
+    .tag-bio{
+        scale: 1;
+    }
+    .tag-bio p{
+        font-size: 2rem;
+    }
+
+    .tp3 p,.tp6 p{
+        margin: 0;
+        font-size: 1.75rem;
+    }
+
+    .p1{
+        grid-area: 1 / 4 / 2 / 5;
+    }
+    .bp1{
+        grid-area: 1 / 3 / 2 / 6;
+    }
+    .p2{
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    .bp2{
+        grid-area: 2 / 2 / 3 / 5;
+    }
+    .p3{
+        grid-area: 2 / 4 / 3 / 5;
+    }
+    .bp3{
+        grid-area: 2/ 3 / 3 / 6;
+    }
+    .p4{
+        grid-area: 2 / 5 / 3 / 6;
+    }
+    .bp4{
+        grid-area: 2 / 4 / 3 / 7;
+    }
+    .p5{
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .bp5{
+        grid-area: 3 / 1 / 4 / 4;
+    }
+    .p6{
+        grid-area: 3 / 3 / 4 / 4;
+    }
+    .bp6{
+        grid-area: 3 / 2 / 4 / 5;
+    }
+    .p7{
+        grid-area: 3 / 4 / 4 / 5;
+    }
+    .bp7{
+        grid-area: 3 / 3 / 4 / 6;
+    }
+    .p8{
+        grid-area: 3 / 5 / 4 / 6;
+    }
+    .bp8{
+        grid-area: 3 / 4 / 4 / 7;
+    }
+    .p9{
+        grid-area: 3 / 6 / 4 / 7;
+    }
+    .bp9{
+        grid-area: 3 / 5 / 4 / 8;
+    }
+}
