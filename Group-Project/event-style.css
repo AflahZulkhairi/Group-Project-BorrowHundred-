@@ -164,13 +164,11 @@ body{
     width: 90%;
     border-radius: 25px;
     padding: 3px;
+    overflow: hidden;
 }
-.card-image .card-img{
+.card-img{
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-    border : 4px solid #055FFE;
 }
 .name{
     font-size: 18px;
@@ -181,19 +179,6 @@ body{
     font-size: 1rem;
     color: #707070;
     text-align: center;
-}
-.button{
-    border: none;
-    font-size: #FFF;
-    padding: 8px 16px;
-    border-radius: 6px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.3 ease;
-}
-.button:hover{
-    background: #055FFE;
-    color: white;
 }
 .swiper-navBtn{
     color: #055FFE;
