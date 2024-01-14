@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reg-style.css">
+    <script src="reg-script.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="page">
+            <div class="pattern"><img src="Assets/Pattern.png"></div>
+            <header class="header">
+                <div class="header-content">
+                    <img src="Assets/Bilal Logo.png" alt="bilal logo">
+                    <p>MAHALLAH BILAL WEBSITE</p>
+                </div>
+            </header>
+            <div class="body-container">
+                    <form action="">
+                        <div class="form-container">
+                            <div class="input-box block">
+                                <label for="block">Block :</label>
+                                <select name="block" id="block" onchange="showBlock()">
+                                    <option value="">Please Choose Block</option>
+                                    <option value="a">Block A</option>
+                                    <option value="b">Block B</option>
+                                    <option value="c">Block C</option>
+                                    <option value="d">Block D</option>
+                                    <option value="e">Block E</option>
+                                    <option value="f">Block F</option>
+                                    <option value="g">Block G</option>
+                                    <option value="pg">Block PG</option>
+                                </select>
+                            </div>
+                            <div class="input-box level">
+                                <label for="level">Level :</label>
+                                <select name="level" id="level">
+                                    <option value="level1">Level 1</option>
+                                    <option value="level2">Level 2</option>
+                                    <option value="level3">Level 3</option>
+                                    <option value="level4">Level 4</option>
+                                    <option value="level5">Level 5</option>
+                                </select>
+                            </div>
+                            <div class="input-box name">
+                                <label for="name">Name: </label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div class="input-box matricno">
+                                <label for="matricno">Matric Number: </label>
+                                <input type="text" name="matricno" id="matricno">
+                            </div>
+                            <div class="input-box file">
+                                <div>
+                                    <label for="file">L.O.U Submission: </label>
+                                </div>
+                                <div>
+                                    <input type="file" name="file" id="file">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button type="button" onclick="Submitting()">SUBMIT</button>
+                            </div>
+                        </div>
+                    </form>
+                <div class="map-container">
+                    <div class="rectangle">
+                        <div class="map"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function Submitting() {
+        alert('You have submitted the form');
+    };
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd-p8TLt4VRG4dwhdfL1z5IsEpkTe6Aho&callback=initMap"></script>
+</html>

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@keyframes slideInLeft{
+    from {
+        transform: translateX(-1920px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes slideInRight{
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes fadeInRight {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1; 
+    }
+}
+
+*,
+* ::before,
+* ::after {
+    box-sizing: border-sub;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden;   
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.page{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(108deg, #347EFE 0%, #055FFE 100%);  
+}
+
+.pattern{
+    position: absolute;
+    right: 0px;
+    animation: slideInRight 1s ease-out;
+}
+.pattern img{
+    display: block;
+    height: 100vh;
+}
+.header{
+    position: absolute;
+    width: 100vw;
+    padding: 0.5rem;
+    left: 0px;
+    animation: slideInLeft 1s ease-out;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-content img{
+    max-height: 75px;
+}
+
+.header-content p{
+    font-size: 1rem;
+    color: white;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    background-color: linear-gradient(108deg, #347EFE 0%, #055FFE 100%);;
+    padding: 40px 0;
+    justify-content: center;
+}
+.body-slide{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:fadeInRight 1s ease-out;
+}
+.slide-content{
+    
+    margin: 0 40px;
+    background-color: linear-gradient(108deg, #347EFE 0%, #055FFE 100%);
+    
+}
+.card{
+    border-radius: 35px;
+    background-color: #FFF;
+    box-shadow: 10px 0px black;
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 20px;
+    border-radius: 25px 25px 0px 25px;
+    border: white;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #055FFE;
+    border-radius: 25px 25px 0px 25px;
+    /* border: solid white 1px ; */
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -35px;
+    height: 35px;
+    width: 35px;
+    background-color: #055FFE;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: white;
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 90%;
+    border-radius: 25px;
+    padding: 3px;
+}
+.card-image .card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    border : 4px solid #055FFE;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+.description{
+    font-size: 1rem;
+    color: #707070;
+    text-align: center;
+}
+.button{
+    border: none;
+    font-size: #FFF;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+.button:hover{
+    background: #055FFE;
+    color: white;
+}
+.swiper-navBtn{
+    color: #055FFE;
+}
+.swiper-navBtn:hover{
+    color: #000;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 40px;
+}
+.swiper-button-next{
+    right:0
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swiper-pagination.bullet{
+    background-color:#347EFE;
+    opacity: 1;
+}
+.swiper-pagination.bullet-active{
+    background-color: #055FFE;
+}
+
+@media (min-width: 800px){
+    .header{
+        position: absolute;
+        width: 100vw;
+        padding: 2rem;
+        left: 0px;
+    }
+    .header-content{
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .header-content img{
+        max-height: 127px;
+    }
+    .header-content p{
+        font-size: 4rem;
+    }
+}
